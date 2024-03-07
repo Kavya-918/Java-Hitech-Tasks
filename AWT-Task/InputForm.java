@@ -38,7 +38,7 @@ public class InputForm extends Frame {
         courseChoice.add("C++");
 
         Label handicapLabel = new Label("Handicap:");
-        handicraftGroup = new CheckboxGroup();
+        handicapGroup = new CheckboxGroup();
         yesCheckbox = new Checkbox("Yes", handicapGroup, false);
         noCheckbox = new Checkbox("No", handicapGroup, true);
 
