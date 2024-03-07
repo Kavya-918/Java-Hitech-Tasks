@@ -1,16 +1,17 @@
+/* Task is to write a code using awt to take input as name,fathername,address,gender,course,handicap like a form interface*/
 import java.awt.*;
 import java.awt.event.*;
 
 public class InputForm extends Frame {
     TextField nameField, fatherNameField, addressField;
     Choice genderChoice, courseChoice;
-    CheckboxGroup handicraftGroup;
+    CheckboxGroup handicapGroup;
     Checkbox yesCheckbox, noCheckbox;
 
     public InputForm() {
         setTitle("Input Form");
         setSize(400, 300);
-        setLayout(new FlowLayout());//is used to arrange the components in a line,one after another (in a flow). It is the default layout of the applet or panel.
+        setLayout(new FlowLayout()); //is used to arrange the components in a line,one after another (in a flow). It is the default layout of the applet or panel.
 
         Label nameLabel = new Label("Name:");
         nameField = new TextField(20);
@@ -36,10 +37,10 @@ public class InputForm extends Frame {
         courseChoice.add("C");
         courseChoice.add("C++");
 
-        Label handicraftLabel = new Label("Handicraft:");
+        Label handicapLabel = new Label("Handicap:");
         handicraftGroup = new CheckboxGroup();
-        yesCheckbox = new Checkbox("Yes", handicraftGroup, false);
-        noCheckbox = new Checkbox("No", handicraftGroup, true);
+        yesCheckbox = new Checkbox("Yes", handicapGroup, false);
+        noCheckbox = new Checkbox("No", handicapGroup, true);
 
         add(nameLabel);
         add(nameField);
@@ -51,7 +52,7 @@ public class InputForm extends Frame {
         add(addressField);
         add(courseLabel);
         add(courseChoice);
-        add(handicraftLabel);
+        add(handicapLabel);
         add(yesCheckbox);
         add(noCheckbox);
 
